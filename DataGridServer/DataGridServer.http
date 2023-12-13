@@ -1,0 +1,10 @@
+@DataGridServer_HostAddress = http://localhost:5123
+
+GET {{DataGridServer_HostAddress}}/api/Values/SeedData
+Accept: application/json
+
+###
+
+GET {{DataGridServer_HostAddress}}/api/Values/GetAll?skip=9000&top=2
+
+###

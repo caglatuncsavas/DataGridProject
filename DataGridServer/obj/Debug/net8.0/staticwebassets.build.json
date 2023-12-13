@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "9wDUCpJE8mKTQRh30o6ibFcONy7w1dDN7HNe9TUktIQ=",
+  "Source": "DataGridServer",
+  "BasePath": "_content/DataGridServer",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
