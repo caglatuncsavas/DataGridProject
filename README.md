@@ -1,37 +1,36 @@
-# Angular AG Grid ve ASP.NET Core ile Veri Yönetimi
+# Data Display and Management with Angular AG Grid and ASP.NET Core
 
-Bu proje, Angular'da AG Grid kullanımını ve ASP.NET Core'da OData ve Entity Framework ile veri yönetimini birleştirir. AG Grid, Angular tabanlı bir kullanıcı arayüzünde veri gösterimi sağlarken, ASP.NET Core sunucu tarafında veri işlemleri için kullanılır.
+This project combines the use of AG Grid in Angular with data management in ASP.NET Core using OData and Entity Framework. AG Grid is used in an Angular-based user interface for data display, while ASP.NET Core is employed for server-side data operations.
 
-## Özellikler
+## Features
 
-- **Angular AG Grid**: Kullanıcı arayüzünde etkili veri gösterimi ve etkileşim.
-- **ASP.NET Core API**: Veri erişimi ve manipülasyonu için güvenilir ve esnek bir sunucu tarafı yapılandırması.
-- **OData ve Entity Framework**: Veritabanı işlemleri ve sorgulama yetenekleri.
-- **Bogus Kütüphanesi**: Sahte veri üretimi için kullanılır, bu sayede gerçekçi test senaryoları oluşturulabilir.
+- **Angular AG Grid**: Effective data display and interaction in the user interface.
+- **ASP.NET Core API**: A reliable and flexible server-side configuration for data access and manipulation.
+- **OData ve Entity Framework**: Capabilities for database operations and querying.
+- **Bogus K Library**: Used for generating fake data, thereby enabling realistic test scenarios.
+## Installation
 
-## Kurulum
+To run this project locally, follow these steps:
 
-Bu projeyi yerel olarak çalıştırmak için aşağıdaki adımları takip edin:
-
-### Repository'i Klonlayın
+### Clone the Repository
 
 ```bash
 git clone [https://github.com/caglatunc/DataGridProject.git]
 ````
-### ASP.NET Core API'yi Başlatın
-- 'DataGridServer' klasörüne gidin.
-- Gerekli NuGet paketlerini yükleyin ve uygulamayı başlatın.
+### Start the ASP.NET Core API
+- Navigate to the 'DataGridServer' folder.
+- Install the necessary NuGet packages and start the application.
   
-### Angular Uygulamasını Başlatın
-- Gerekli npm paketlerini yükleyin (npm install ag-grid-angular).
-- Uygulamayı başlatın (ng serve).
+### Start the Angular Application
+- Install the necessary npm packages (`npm install ag-grid-angular`).
+- Start the application (`ng serve`).
 
-## Kullanım
-## Angular Uygulaması
-- AG Grid: Veriler, tablo formatında gösterilir. Kullanıcılar verileri sıralayabilir, filtreleyebilir ve düzenleyebilir.
-- Http İstemcisi: Angular'da HTTP istemcisi, ASP.NET Core API ile veri alışverişinde bulunur.
+## Usage
+## Angular Application
+- AG Grid: Data is displayed in a table format. Users can sort, filter, and edit the data.
+- HTTP Client: The HTTP client in Angular interacts with the ASP.NET Core API for data exchange.
 
 ## ASP.NET Core API
-- SeedData Metodu: Başlangıç verileri oluşturur ve veritabanına kaydeder.
-- GetAll Metodu: OData protokolünü kullanarak veri sorgulaması sağlar.
-- Update Metodu: Değiştirilen verileri günceller.
+- SeedData Method: Generates initial data and saves it to the database.
+- GetAll Method: Facilitates data querying using the OData protocol.
+- Update Method: Updates modified data.
