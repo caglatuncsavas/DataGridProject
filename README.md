@@ -18,11 +18,11 @@ Bu projeyi yerel olarak çalıştırmak için aşağıdaki adımları takip edin
 ```bash
 git clone [repository-link]
 ````
-## ASP.NET Core API'yi Başlatın
+### ASP.NET Core API'yi Başlatın
 - **'DataGridServer' klasörüne gidin.
 - **Gerekli NuGet paketlerini yükleyin ve uygulamayı başlatın.
   
-##Angular Uygulamasını Başlatın
+### Angular Uygulamasını Başlatın
 - **Gerekli npm paketlerini yükleyin (npm install).
 - **Uygulamayı başlatın (ng serve).
 
