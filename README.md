@@ -27,11 +27,11 @@ git clone [repository-link]
 - **Uygulamayı başlatın (ng serve).
 
 ## Kullanım
-### Angular Uygulaması
+## Angular Uygulaması
 - **AG Grid: Veriler, tablo formatında gösterilir. Kullanıcılar verileri sıralayabilir, filtreleyebilir ve düzenleyebilir.
 - **Http İstemcisi: Angular'da HTTP istemcisi, ASP.NET Core API ile veri alışverişinde bulunur.
 
-### ASP.NET Core API
+## ASP.NET Core API
 - **SeedData Metodu: Başlangıç verileri oluşturur ve veritabanına kaydeder.
 - **GetAll Metodu: OData protokolünü kullanarak veri sorgulaması sağlar.
 - **Update Metodu: Değiştirilen verileri günceller.
