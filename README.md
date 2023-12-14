@@ -38,6 +38,7 @@ git clone [https://github.com/caglatunc/DataGridProject.git]
 ![image](https://github.com/caglatunc/DataGridProject/assets/95507765/2d0d819d-dcc5-4052-a9c8-738985d71c0c)
 ![image](https://github.com/caglatunc/DataGridProject/assets/95507765/31ef5373-dc76-41cc-91a7-d53bf558ee6f)
 
+## Features From Tables
 -Search
 -Sorting
 -Pagination
