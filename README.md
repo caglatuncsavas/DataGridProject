@@ -39,12 +39,12 @@ git clone [https://github.com/caglatunc/DataGridProject.git]
 ![image](https://github.com/caglatunc/DataGridProject/assets/95507765/31ef5373-dc76-41cc-91a7-d53bf558ee6f)
 
 ## Features From Tables
--Search
--Sorting
--Pagination
--Page Size Adjustment
--Total Record and Page Information
--Loading
+- Search
+- Sorting
+- Pagination
+- Page Size Adjustment
+- Total Record and Page Information
+- Loading
 
 
 
