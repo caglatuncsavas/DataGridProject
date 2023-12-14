@@ -34,3 +34,17 @@ git clone [https://github.com/caglatunc/DataGridProject.git]
 - SeedData Method: Generates initial data and saves it to the database.
 - GetAll Method: Facilitates data querying using the OData protocol.
 - Update Method: Updates modified data.
+
+![image](https://github.com/caglatunc/DataGridProject/assets/95507765/2d0d819d-dcc5-4052-a9c8-738985d71c0c)
+![image](https://github.com/caglatunc/DataGridProject/assets/95507765/31ef5373-dc76-41cc-91a7-d53bf558ee6f)
+
+-Search
+-Sorting
+-Pagination
+-Page Size Adjustment
+-Total Record and Page Information
+-Loading
+
+
+
+
