@@ -19,19 +19,19 @@ Bu projeyi yerel olarak çalıştırmak için aşağıdaki adımları takip edin
 git clone [repository-link]
 ````
 ### ASP.NET Core API'yi Başlatın
-- **'DataGridServer' klasörüne gidin.
-- **Gerekli NuGet paketlerini yükleyin ve uygulamayı başlatın.
+- 'DataGridServer' klasörüne gidin.
+- Gerekli NuGet paketlerini yükleyin ve uygulamayı başlatın.
   
 ### Angular Uygulamasını Başlatın
-- **Gerekli npm paketlerini yükleyin (npm install).
-- **Uygulamayı başlatın (ng serve).
+- Gerekli npm paketlerini yükleyin (npm install).
+- Uygulamayı başlatın (ng serve).
 
 ## Kullanım
 ## Angular Uygulaması
-- **AG Grid: Veriler, tablo formatında gösterilir. Kullanıcılar verileri sıralayabilir, filtreleyebilir ve düzenleyebilir.
-- **Http İstemcisi: Angular'da HTTP istemcisi, ASP.NET Core API ile veri alışverişinde bulunur.
+- AG Grid: Veriler, tablo formatında gösterilir. Kullanıcılar verileri sıralayabilir, filtreleyebilir ve düzenleyebilir.
+- Http İstemcisi: Angular'da HTTP istemcisi, ASP.NET Core API ile veri alışverişinde bulunur.
 
 ## ASP.NET Core API
-- **SeedData Metodu: Başlangıç verileri oluşturur ve veritabanına kaydeder.
-- **GetAll Metodu: OData protokolünü kullanarak veri sorgulaması sağlar.
-- **Update Metodu: Değiştirilen verileri günceller.
+- SeedData Metodu: Başlangıç verileri oluşturur ve veritabanına kaydeder.
+- GetAll Metodu: OData protokolünü kullanarak veri sorgulaması sağlar.
+- Update Metodu: Değiştirilen verileri günceller.
