@@ -16,14 +16,14 @@ Bu projeyi yerel olarak çalıştırmak için aşağıdaki adımları takip edin
 ### Repository'i Klonlayın
 
 ```bash
-git clone [repository-link]
+git clone [https://github.com/caglatunc/DataGridProject.git]
 ````
 ### ASP.NET Core API'yi Başlatın
 - 'DataGridServer' klasörüne gidin.
 - Gerekli NuGet paketlerini yükleyin ve uygulamayı başlatın.
   
 ### Angular Uygulamasını Başlatın
-- Gerekli npm paketlerini yükleyin (npm install).
+- Gerekli npm paketlerini yükleyin (npm install ag-grid-angular).
 - Uygulamayı başlatın (ng serve).
 
 ## Kullanım
