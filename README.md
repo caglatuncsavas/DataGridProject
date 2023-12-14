@@ -6,8 +6,8 @@ This project combines the use of AG Grid in Angular with data management in ASP.
 
 - **Angular AG Grid**: Effective data display and interaction in the user interface.
 - **ASP.NET Core API**: A reliable and flexible server-side configuration for data access and manipulation.
-- **OData ve Entity Framework**: Capabilities for database operations and querying.
-- **Bogus K Library**: Used for generating fake data, thereby enabling realistic test scenarios.
+- **OData and Entity Framework**: Capabilities for database operations and querying.
+- **Bogus Library**: Used for generating fake data, thereby enabling realistic test scenarios.
 ## Installation
 
 To run this project locally, follow these steps:
