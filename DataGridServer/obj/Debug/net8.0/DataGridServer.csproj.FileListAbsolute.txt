@@ -286,3 +286,5 @@ C:\DataGridProject\DataGridServer\obj\Debug\net8.0\refint\DataGridServer.dll
 C:\DataGridProject\DataGridServer\obj\Debug\net8.0\DataGridServer.pdb
 C:\DataGridProject\DataGridServer\obj\Debug\net8.0\DataGridServer.genruntimeconfig.cache
 C:\DataGridProject\DataGridServer\obj\Debug\net8.0\ref\DataGridServer.dll
+C:\DataGridProject\DataGridServer\bin\Debug\net8.0\libman.json
+C:\DataGridProject\DataGridServer\obj\Debug\net8.0\DataGridServer.sourcelink.json

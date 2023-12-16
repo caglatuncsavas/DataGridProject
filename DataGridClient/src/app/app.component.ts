@@ -2,28 +2,31 @@ import { Component } from '@angular/core';
 import { CommonModule, DatePipe } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { AgGridModule } from 'ag-grid-angular';
+import { GetContextMenuItemsParams,MenuItemDef, ColDef } from 'ag-grid-community';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { ButtonRenderComponent } from './button-render/button-render.component';
+import { ButtonRendererComponent } from './button-renderer.component';
+
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, AgGridModule, ButtonRenderComponent],
+  imports: [CommonModule, RouterOutlet, AgGridModule, ButtonRendererComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
 
   rowData: any = [];
+  frameworkComponents:any;
 
-  colDefs: any[] = [
+  colDefs: ColDef[] = [
     {
       headerName: "#",
       valueGetter: (params: any) => params.node.rowIndex + 1,
       width: 30,
       floatingFilter: false,
-      sort: false,
+      sortable: false
     },
     { field: "name" },
     { field: "summary" },
@@ -32,6 +35,14 @@ export class AppComponent {
       field: "publishDate",
       valueFormatter: (params: any) => {
         return new Date(params.value).toLocaleDateString('tr-TR', { day: '2-digit', month: '2-digit', year: 'numeric' });
+      }
+    },
+    {
+      headerName:"Operations",
+      cellRenderer:"buttonRenderer",
+      cellRendererParams:{
+        onClick:this.remove.bind(this),
+        label:'Remove'
       }
     }
   ];
@@ -55,12 +66,40 @@ export class AppComponent {
     onCellValueChanged: (params: any) => this.update(params),
   }
   
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.frameworkComponents={
+      buttonRenderer:ButtonRendererComponent
+    }
+   }
 
   onGridReady(params: any) {
     params.api.showLoadingOverlay();
     this.getAll(params);
   }
+
+  remove(event:any){
+    console.log(event.rowData)
+  }
+
+  getContextMenuItems(params: GetContextMenuItemsParams):(string | MenuItemDef)[] {
+  var result:(string |MenuItemDef)[] = [
+    {
+      name:"Example Action",
+      action: ()=>{
+        console.log("Örnek aksiyon çalıştırıldı...");
+        console.log(params?.node?.data);//Seçili satırın verilerini almak için kullanılır.
+      }
+    },
+    'copy',
+    'seperator',
+    'paste'
+  ]
+return result;
+  }
+
+onRowDoubleClicked(event:any){
+console.log(event.data);
+}
 
   checkAuthorization() {
     return true;
