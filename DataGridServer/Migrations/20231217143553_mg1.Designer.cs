@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataGridServer.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231210150916_mg1")]
+    [Migration("20231217143553_mg1")]
     partial class mg1
     {
         /// <inheritdoc />

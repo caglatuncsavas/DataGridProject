@@ -5,6 +5,6 @@ Accept: application/json
 
 ###
 
-GET {{DataGridServer_HostAddress}}/api/Values/GetAll?skip=9000&top=2
+GET {{DataGridServer_HostAddress}}/api/Values/GetAll?skip=5&top=10
 
 ###

@@ -17,7 +17,7 @@ public class ValuesController(AppDbContext context) : ControllerBase
     public IActionResult SeedData()
     {
         
-        for(int i = 0; i < 10000; i++)
+        for(int i = 0; i < 1000; i++)
         {
             Faker faker = new();
             Book book = new()
@@ -63,6 +63,16 @@ public sealed class AppDbContext : DbContext
 
     public DbSet<Book> Books { get; set; } 
 }
+
+
+public sealed record PaginationResponse<T>
+    where T:class
+    {
+        public T? Data { get; init; }
+        public int TotalCount { get; init; } 
+     }
+
+
 public sealed class Book
 {
     public Book() 

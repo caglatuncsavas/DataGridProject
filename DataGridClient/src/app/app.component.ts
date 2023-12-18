@@ -5,20 +5,24 @@ import { AgGridModule } from 'ag-grid-angular';
 import { GetContextMenuItemsParams,MenuItemDef, ColDef } from 'ag-grid-community';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { ButtonRendererComponent } from './button-renderer.component';
-
+import 'ag-grid-enterprise';
+import { GridApi, RowModelType } from 'ag-grid-enterprise';
+import { ServerSideComponent } from './server-side/server-side.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, AgGridModule, ButtonRendererComponent],
+  imports: [CommonModule, RouterOutlet, AgGridModule, ButtonRendererComponent, ServerSideComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-
   rowData: any = [];
   frameworkComponents:any;
+  gridApi: any;
+  rowModelType: RowModelType | undefined ='serverSide';
+
 
   colDefs: ColDef[] = [
     {
@@ -67,12 +71,13 @@ export class AppComponent {
   }
   
   constructor(private http: HttpClient) {
-    this.frameworkComponents={
+    this.frameworkComponents = {
       buttonRenderer:ButtonRendererComponent
     }
    }
 
   onGridReady(params: any) {
+    this.gridApi = params.api;
     params.api.showLoadingOverlay();
     this.getAll(params);
   }
@@ -90,13 +95,36 @@ export class AppComponent {
         console.log(params?.node?.data);//Seçili satırın verilerini almak için kullanılır.
       }
     },
+    {
+      name:"Export",
+      icon:`<i class="fa fa-file-excel-o" aria-hidden="true"></i>`,
+      subMenu:[
+        {
+          name:"Excel",
+          action:()=>{
+            params.api.exportDataAsExcel();
+          }
+        },
+        {
+          name:"CSV",
+          action:()=>{
+            params.api.exportDataAsCsv();
+          }
+        }
+      ]
+    },
     'copy',
     'seperator',
     'paste'
   ]
 return result;
   }
-
+  onFilterTextBoxChanged() {
+    this.gridApi!.setGridOption(
+      'quickFilterText',
+      (document.getElementById('filter-text-box') as HTMLInputElement).value
+    );
+  }
 onRowDoubleClicked(event:any){
 console.log(event.data);
 }

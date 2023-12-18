@@ -13,7 +13,7 @@ import { ICellRendererParams } from 'ag-grid-community';
     `
   
 })
-export class ButtonRendererComponent implements ICellRendererAngularComp {
+export class ButtonRendererComponent {
   
   params: any;
   label: string = "";
@@ -24,11 +24,6 @@ export class ButtonRendererComponent implements ICellRendererAngularComp {
     this.label = this.params.label || null;
   }
   
-  refresh(params: ICellRendererParams<any, any, any>): boolean {
-    this.params = params;
-    this.label = this.params.label || null;
-    return true;
-  }
   
   onClick(event: any){
     if(this.params.onClick instanceof Function){
