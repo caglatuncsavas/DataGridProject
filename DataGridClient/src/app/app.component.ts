@@ -30,10 +30,8 @@ export class AppComponent {
       valueGetter: (params: any) => params.node.rowIndex + 1,
       width: 30,
       floatingFilter: false,
-      sortable: false
     },
     { field: "name" },
-    { field: "summary" },
     { field: "author" },
     {
       field: "publishDate",
